@@ -1,7 +1,8 @@
+*.lock
+
 # compiled output
 /dist
 /node_modules
-
 # Logs
 logs
 *.log
