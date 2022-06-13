@@ -1,6 +1,6 @@
 type User {
   """Id de sql"""
-  id: Int!
+  id: String!
   """Primer nombre del usuario sin apellido"""
   firstName: String!
   """Apellido del usuario"""

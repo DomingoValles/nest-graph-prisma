@@ -10,7 +10,7 @@ export class UsersService {
   async getById(id: string): Promise<User | null> {
     return this.prisma.user.findUnique({
       where: {
-        id: +id,
+        id: id,
       },
     });
   }
@@ -29,7 +29,7 @@ export class UsersService {
     const { id, firstName, lastName, email, password, active, avatar } = params;
     return this.prisma.user.update({
       where: {
-        id: +id,
+        id: id,
       },
       data: {
         ...(firstName && { firstName }),
@@ -42,10 +42,10 @@ export class UsersService {
     });
   }
 
-  async delete(id: String): Promise<User> {
+  async delete(id: string): Promise<User> {
     return this.prisma.user.delete({
       where: {
-        id: +id,
+        id: id,
       },
     });
   }
