@@ -1,7 +1,11 @@
 type User {
+  """Id de sql"""
   id: Int!
+  """Primer nombre del usuario sin apellido"""
   firstName: String!
+  """Apellido del usuario"""
   lastName: String!
+  """Correo electrónico del usuario"""
   email: String!
   password: String!
   active: Boolean!
