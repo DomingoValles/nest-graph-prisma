@@ -2,7 +2,10 @@ import { Args, Query, Mutation, Resolver } from '@nestjs/graphql';
 import { CreateUser } from './dto/createUser.dto';
 import { EditUser } from './dto/editUser.dto';
 import { UsersService } from './users.service';
+import { AuthGuard } from 'src/auth/auth.guard';
+import { UseGuards } from '@nestjs/common';
 
+@UseGuards(AuthGuard)
 @Resolver('Users')
 export class UsersResolver {
   constructor(private usersService: UsersService) {}
